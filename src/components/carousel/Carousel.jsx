@@ -88,7 +88,6 @@ const Carousel = () => {
     );
   });
 
-  console.log(trending);
 
   const responsive = {
     0: {
