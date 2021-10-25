@@ -22,14 +22,14 @@ const useStyles = makeStyles((themes) => ({
     display: "flex",
     alignItems: "center",
   },
-  carouselItem:{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      cursor:"pointer",
-      textTransform: "uppercase",
-      color:"#fff"
-  }
+  carouselItem: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    cursor: "pointer",
+    textTransform: "uppercase",
+    color: "#fff",
+  },
 }));
 
 export const numberWithCommas = (x) => {
@@ -37,11 +37,12 @@ export const numberWithCommas = (x) => {
 };
 
 const Carousel = () => {
+  //TODO: setup state
   const [trending, setTrending] = useState([]);
   const classes = useStyles();
   const { currency, symbol } = CryptoState();
 
-  //TODO: Setup API
+  //TODO: handle API
 
   const fetchTrendingCoins = async () => {
     const { data } = await axios.get(TrendingCoins(currency));
@@ -52,7 +53,7 @@ const Carousel = () => {
     fetchTrendingCoins();
   }, [currency]);
 
-  //TODO: Setup AliceCarousel
+  //TODO: handle AliceCarousel
 
   const items = trending.map((item) => {
     let profit = item.price_change_percentage_24h >= 0;
@@ -67,10 +68,16 @@ const Carousel = () => {
         <span>
           {item?.symbol}
           &nbsp;
-          <span style={{
-              color:profit > 0? "rgb(14,203,129)" : "red"
-          }}>
-            {profit && "+"} {item?.price_change_percentage_24h ? item?.price_change_percentage_24h?.toFixed(2) : 0}%
+          <span
+            style={{
+              color: profit > 0 ? "#2ecc71" : "#e74c3c",
+            }}
+          >
+            {profit && "+"}{" "}
+            {item?.price_change_percentage_24h
+              ? item?.price_change_percentage_24h?.toFixed(2)
+              : 0}
+            %
           </span>
         </span>
 

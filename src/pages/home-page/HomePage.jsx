@@ -6,11 +6,13 @@ import React from "react";
 
 //? import Component
 import Banner from "../../components/banner/Banner";
+import CoinsTable from "../../components/coins-table/CoinsTable";
 
 const HomePage = () => {
   return (
     <>
       <Banner />
+      <CoinsTable />
     </>
   );
 };
