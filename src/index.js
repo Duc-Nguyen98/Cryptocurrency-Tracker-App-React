@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 //? import contexts
 import CryptoContext from "./contexts/CryptoContext";

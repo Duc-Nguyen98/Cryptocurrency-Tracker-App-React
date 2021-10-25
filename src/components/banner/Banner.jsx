@@ -7,6 +7,9 @@ import React from "react";
 //? import Lib
 import { Container, makeStyles, Typography } from "@material-ui/core";
 
+//? import components
+import Carousel from "../carousel/Carousel";
+
 const useStyles = makeStyles(() => ({
   banner: {
     backgroundImage: "url('./assets/banner.jpg')",
@@ -18,13 +21,13 @@ const useStyles = makeStyles(() => ({
     paddingTop: 25,
     justifyContent: "space-around",
   },
-  tagline:{
+  tagline: {
     display: "flex",
-    height:"40%",
+    height: "40%",
     flexDirection: "column",
     justifyContent: "center",
-    textAlign:"center"
-  }
+    textAlign: "center",
+  },
 }));
 
 const Banner = () => {
@@ -54,6 +57,7 @@ const Banner = () => {
             Get All The Info Regarding Your Favorite Crypto Currency
           </Typography>
         </div>
+        <Carousel />
       </Container>
     </div>
   );
