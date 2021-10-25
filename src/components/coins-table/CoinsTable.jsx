@@ -43,20 +43,18 @@ const CoinsTable = () => {
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
-  const [countRecord, setCountRecord] = useState(0);
 
-  console.log(countRecord);
   const { currency, symbol } = CryptoState();
   const history = useHistory();
   //TODO: handle API
-  const fetchCoins = async () => {
-    setLoading(true);
-    const { data } = await axios.get(CoinList(currency));
-    setCoins(data);
-    setLoading(false);
-  };
 
   useEffect(() => {
+    const fetchCoins = async () => {
+      setLoading(true);
+      const { data } = await axios.get(CoinList(currency));
+      setCoins(data);
+      setLoading(false);
+    };
     fetchCoins();
   }, [currency]);
 
@@ -114,7 +112,7 @@ const CoinsTable = () => {
           onChange={(e) => setSearch(e.target.value)}
         />
 
-        <TableContainer>
+        <TableContainer component={Paper}>
           {loading ? (
             <LinearProgress style={{ background: "gold" }} />
           ) : (
@@ -215,9 +213,20 @@ const CoinsTable = () => {
             count={+(handleSearch()?.length / 10).toFixed()}
             onChange={(_, value) => {
               setPage(+value);
-              window.scroll(0, 450);
+              window.scrollTo(
+                window.scrollTo({
+                  top: 450,
+                  behavior: "smooth",
+                })
+              );
             }}
           />
+        )}
+
+        {handleSearch()?.length === 0 && (
+          <Typography variant="h5" style={{ padding: 10 }}>
+            Result not found.
+          </Typography>
         )}
       </Container>
     </ThemeProvider>

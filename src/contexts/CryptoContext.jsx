@@ -14,9 +14,10 @@ const CryptoContext = (props) => {
     switch (currency) {
       case "USD":
         return setSymbol("$");
-      case "VI":
+      case "VND":
         return setSymbol("₫");
       default:
+        setSymbol("₹");
         return;
     }
   }, [currency]);

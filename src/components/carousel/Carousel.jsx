@@ -44,12 +44,11 @@ const Carousel = () => {
 
   //TODO: handle API
 
-  const fetchTrendingCoins = async () => {
-    const { data } = await axios.get(TrendingCoins(currency));
-    setTrending(data);
-  };
-
   useEffect(() => {
+    const fetchTrendingCoins = async () => {
+      const { data } = await axios.get(TrendingCoins(currency));
+      setTrending(data);
+    };
     fetchTrendingCoins();
   }, [currency]);
 
@@ -87,7 +86,6 @@ const Carousel = () => {
       </Link>
     );
   });
-
 
   const responsive = {
     0: {

@@ -16,7 +16,6 @@ import {
   makeStyles,
   ThemeProvider,
 } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons";
 
 import { useHistory } from "react-router-dom";
 
@@ -45,7 +44,6 @@ const Header = () => {
     },
   });
   const { currency, setCurrency } = CryptoState();
-  console.log(`this` + currency);
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -66,7 +64,7 @@ const Header = () => {
             >
               <MenuItem value={"USD"}>USD</MenuItem>
               <MenuItem value={"INR"}>INR</MenuItem>
-              <MenuItem value={"VI"}>VI</MenuItem>
+              <MenuItem value={"VND"}>VND</MenuItem>
             </Select>
           </Toolbar>
         </Container>
