@@ -20,6 +20,8 @@ import ReactHtmlParser from "react-html-parser";
 import CoinInfo from "../../components/coin-info/CoinInfo";
 import { numberWithCommas } from "../../components/carousel/Carousel";
 
+//TODO: setup styles
+
 const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",

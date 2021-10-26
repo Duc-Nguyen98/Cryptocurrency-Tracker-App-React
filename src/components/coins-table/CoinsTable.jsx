@@ -58,16 +58,6 @@ const CoinsTable = () => {
     fetchCoins();
   }, [currency]);
 
-  //TODO: setup DarkThemes
-  const darkTheme = createTheme({
-    palette: {
-      primary: {
-        main: "#fff",
-      },
-      type: "dark",
-    },
-  });
-
   //TODO: Handle Search
 
   const handleSearch = () => {
@@ -77,6 +67,16 @@ const CoinsTable = () => {
         item.symbol.toLowerCase().includes(search)
     );
   };
+
+  //TODO: setup DarkThemes & styles
+  const darkTheme = createTheme({
+    palette: {
+      primary: {
+        main: "#fff",
+      },
+      type: "dark",
+    },
+  });
 
   const useStyles = makeStyles(() => ({
     row: {
