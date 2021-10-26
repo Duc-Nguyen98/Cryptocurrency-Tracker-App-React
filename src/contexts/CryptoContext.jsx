@@ -7,8 +7,8 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 const Crypto = createContext();
 
 const CryptoContext = (props) => {
-  const [currency, setCurrency] = useState("INR");
-  const [symbol, setSymbol] = useState("₹");
+  const [currency, setCurrency] = useState("VND");
+  const [symbol, setSymbol] = useState("₫");
 
   useEffect(() => {
     switch (currency) {

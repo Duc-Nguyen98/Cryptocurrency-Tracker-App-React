@@ -49,14 +49,14 @@ const useStyles = makeStyles((theme) => ({
   description: {
     width: "100%",
     fontFamily: "Montserrat",
-    padding: 25,
+    // padding: 25,
     paddingBottom: 15,
     paddingTop: 0,
     textAlign: "center",
   },
   marketData: {
     alignSelf: "start",
-    padding: 25,
+    // padding: 25,
     paddingTop: 10,
     width: "100%",
     [theme.breakpoints.down("md")]: {
@@ -89,7 +89,7 @@ const CoinPage = () => {
     fetchCoins();
   }, [id]);
 
-  if (!coin) return <LinearProgress style={{ backgroundColor: "gold" }} />;
+  if (!coin) return <LinearProgress style={{ backgroundColor: "#FA983A" }} />;
   return (
     <div className={classes.container}>
       <div className={classes.sidebar}>

@@ -9,21 +9,20 @@ import { makeStyles } from "@material-ui/core";
 const SelectButton = (props) => {
   const useStyles = makeStyles(() => ({
     selectButton: {
-      border: "1px solid gold",
+      border: "1px solid #FA983A",
       borderRadius: 5,
       padding: 10,
-      paddingLeft: 20,
-      paddingRight: 20,
       fontFamily: "Montserrat",
       cursor: "pointer",
-      backgroundColor: props.selected ? "gold" : "",
+      backgroundColor: props.selected ? "#FA983A" : "",
       color: props.selected ? "black" : "",
       fontWeight: props.selected ? 700 : 500,
+      transition: ".4s",
       "&:hover": {
-        backgroundColor: "gold",
+        backgroundColor: "#FA983A",
         color: "black",
       },
-      width: "22%",
+      width: "15%",
       //   margin: 5,
     },
   }));
