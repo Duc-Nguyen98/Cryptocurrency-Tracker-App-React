@@ -25,7 +25,6 @@ import { chartDays } from "../../config/data/data";
 import SelectButton from "../customize-ui/SelectButton";
 
 const CoinInfo = (props) => {
-  console.log(`this` + JSON.stringify(props));
   const [historicData, setHistoricData] = useState();
   const [days, setDays] = useState(1);
   const { currency } = CryptoState();
@@ -120,7 +119,13 @@ const CoinInfo = (props) => {
               }}
             >
               {chartDays.map((day) => (
-                <SelectButton>{day.label}</SelectButton>
+                <SelectButton
+                  ket={day.value}
+                  onClick={() => setDays(day.value)}
+                  selected={day.value === days}
+                >
+                  {day.label}
+                </SelectButton>
               ))}
             </div>
           </>
