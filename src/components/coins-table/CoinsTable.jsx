@@ -204,7 +204,7 @@ const CoinsTable = () => {
         {handleSearch()?.length > 10 && (
           <Pagination
             style={{
-              padding: 20,
+              padding: "20 0",
               width: "100%",
               display: "flex",
               justifyContent: "center",
