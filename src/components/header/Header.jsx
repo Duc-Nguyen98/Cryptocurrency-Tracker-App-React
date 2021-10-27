@@ -22,6 +22,9 @@ import { useHistory } from "react-router-dom";
 //? import Context
 import { CryptoState } from "../../contexts/CryptoContext";
 
+//? import logo
+import Logo from "../../assets/beecoins.png";
+
 const useStyles = makeStyles((theme) => ({
   title: {
     flex: 1,
@@ -32,15 +35,14 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     width: "20%",
-    objectFit: "cover",
     [theme.breakpoints.down("md")]: {
-      width: "25%",
+      width: "15%",
     },
     [theme.breakpoints.down("sm")]: {
       width: "35%",
     },
     [theme.breakpoints.down("xs")]: {
-      width: "55%",
+      width: "75%",
     },
   },
 }));
@@ -67,7 +69,7 @@ const Header = () => {
               <img
                 className={classes.image}
                 onClick={() => history.push("/")}
-                src="./assets/beecoins.png"
+                src={Logo}
                 alt="BeeCoins-Logo"
               />
             </Typography>
