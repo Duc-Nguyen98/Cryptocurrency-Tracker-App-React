@@ -63,26 +63,14 @@ const Header = () => {
       <AppBar color="transparent" position="static">
         <Container>
           <Toolbar>
-            {/* <Typography
-              onClick={() => history.push("/")}
-              className={classes.title}
-            >
-              Bee Coins
-            </Typography> */}
             <Typography style={{ flexGrow: 1 }}>
               <img
                 className={classes.image}
                 onClick={() => history.push("/")}
-                src="https://beemovies.netlify.app/static/media/logo-text.a13fe42f.png"
+                src="./assets/beecoins.png"
                 alt="BeeCoins-Logo"
               />
             </Typography>
-
-            {/* <img
-              onClick={() => history.push("/")}
-              src="https://beemovies.netlify.app/static/media/logo-text.a13fe42f.png"
-              alt="BeeCoins-Logo"
-            /> */}
             <Select
               variant="outlined"
               style={{ width: 100, height: 40, marginLeft: 15 }}
