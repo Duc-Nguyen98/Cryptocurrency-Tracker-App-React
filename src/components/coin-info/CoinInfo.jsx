@@ -39,7 +39,7 @@ const CoinInfo = (props) => {
       setHistoricData(data.prices);
     };
     fetchHistoricData();
-  }, [currency, days]);
+  }, [currency, days, props.coin.id]);
 
   //TODO: setup DarkThemes & styles
 
