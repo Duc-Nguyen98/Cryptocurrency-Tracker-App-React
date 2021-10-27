@@ -31,15 +31,24 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   sidebar: {
-    width: "30%",
+    width: "20%",
+
     [theme.breakpoints.down("md")]: {
-      width: "100%",
+      width: "80%",
+      borderRight: "none",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "85%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "90%",
     },
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     marginTop: 25,
     borderRight: "2px solid grey",
+    padding: 25,
   },
   heading: {
     fontWeight: "bold",
@@ -52,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     // padding: 25,
     paddingBottom: 15,
     paddingTop: 0,
-    textAlign: "center",
+    textAlign: "justify",
   },
   marketData: {
     alignSelf: "start",
